@@ -1,0 +1,36 @@
+y[{
+  "_id": {
+    "$oid": "6684dcc97e2f21279bbbe5e0"
+  },
+  "mail": "aathan@gmail.com",
+  "phone": "13",
+  "regnum": "877",
+  "s_oil": "true",
+  "s_general": "true",
+  "s_water": "true",
+  "stat": "regired"
+},
+{
+  "_id": {
+    "$oid": "66851edd10ee55aa3b86ca13"
+  },
+  "mail": "dharani@gmail.com",
+  "phone": "123123",
+  "regnum": "871127",
+  "s_oil": "trudsfsfe",
+  "s_general": "trudde",
+  "s_water": "trdadue",
+  "stat": "regidadared"
+},
+{
+  "_id": {
+    "$oid": "66851f0010ee55aa3b86ca16"
+  },
+  "mail": "dhanish@gmail.com",
+  "phone": "123123",
+  "regnum": "871127",
+  "s_oil": "trudsfsfe",
+  "s_general": "trudde",
+  "s_water": "trdadue",
+  "stat": "regidadared"
+}]
