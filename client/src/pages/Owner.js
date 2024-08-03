@@ -31,7 +31,9 @@ function Owner() {
                     <input type="text" placeholder="Enter your Username" onChange={(e) => setUname(e.target.value)} /><br />
                     <label>Password</label><br />
                     <input type="text" placeholder="Enter your Password" onChange={(e) => setPass(e.target.value)} /><br />
-                <button onClick={clk}>Button</button>
+                <button 
+                type="button"
+                onClick={clk}>Button</button>
                 </form>
             </div>
             

@@ -14,10 +14,10 @@ const createBike = async (req, res) => {
     })
     try {
         await data.save()
-        mailer.mail_send("susmithaadhavan9@gmail.com",
-            "You have a new Registration", 
-            "Register Number ", 
-            req.body.regnum)
+        // mailer.mail_send("susmithaadhavan9@gmail.com",
+        //     "You have a new Registration", 
+        //     "Register Number ", 
+        //     req.body.regnum)
         res.status(200).json({
             "message": data
         })

@@ -25,13 +25,20 @@ function Ownerview() {
         await axios.put('http://localhost:3001/owner/update/' + ids, { "stat": upd })
         console.log(ids)
         console.log(upd)
+        // window.location.reload(false)
+        reload()
     }
-
-
-
+    
+    
+    
     const handledel = async (ids) => {
-        await axios.delete('http://localhost:3001/owner/delete/' + ids)
         console.log(ids)
+        await axios.delete('http://localhost:3001/owner/delete/' + ids)
+        reload()
+        
+    }
+    const reload=()=>{
+        window.location.reload(false)
 
     }
 
@@ -71,8 +78,8 @@ function Ownerview() {
                                             <option>Completed</option>
                                         </select>
 
-                                        <button type="submit" placeholder="submit" onClick={() => handlesub(user._id, option)} >Submit</button>
-                                        <button type="submit" placeholder="delete" onClick={() => handledel(user._id)} >delete</button>
+                                <button type="submit" placeholder="submit" onClick={() => handlesub(user._id, option)} >Submit</button>
+                                <button type="submit" placeholder="submit" onClick={() => handledel(user._id)} >delete</button>
                                     
                                 </td>
                             </tr>

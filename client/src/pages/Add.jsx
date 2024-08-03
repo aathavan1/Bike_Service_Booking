@@ -13,9 +13,9 @@ const Add = () => {
 
     const handlesub = async () => {
         const regg="Registered"
-        if(mail.length>0){
+       
 
-            await axios.post('http://localhost:3001/owner/create', {
+            await axios.post('http://localhost:3001/customer/create', {
                 "mail": mail,
                 "phone": phone,
                 "regnum": reg,
@@ -30,7 +30,7 @@ const Add = () => {
                 setPhone(''),
                 setReg('')
             )
-        }
+        
     }
 
     return (
@@ -50,7 +50,7 @@ const Add = () => {
                     <label>Water service
                     <input type='checkbox' value={water} onChange={(e) => setWater(e.target.value)} /></label><br />
 
-                <button onClick={handlesub} >Register</button>
+                <button type='submit' onClick={handlesub} >Register</button>
                 </form>
 
             </div>

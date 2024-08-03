@@ -65,7 +65,7 @@ function Cust() {
                 <label>Enter youe mail</label><br />
                 <input type="text" placeholder="Email" value={mail} onChange={(e) => setMail(e.target.value)} /><br />
 
-                <label>Enter youe Registration</label><br />
+                <label>Enter youe Mobile Number</label><br />
                 <input type="text" placeholder="Reg.No" value={phone} onChange={(e) => setPhone(e.target.value)} /><br />
                 <button type="button" onClick={handlesubmit}>Find</button>
 
@@ -76,12 +76,15 @@ function Cust() {
         {
             con && (<>
                 <table>
+                    <thead>
                     <tr>
                         <th>Mail</th>
                         <th>Phone number</th>
                         <th>Reg number</th>
                         <th>Stauts</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     {
                         cust.map(cust => {
                             if(cust.stat==="Completed"){
@@ -89,7 +92,7 @@ function Cust() {
                             }
                             return (
 
-                                <tr>
+                                <tr key={cust._id}>
                                     <td>{cust.mail}</td>
                                     <td>{cust.phone}</td>
                                     <td>{cust.regnum}</td>
@@ -99,6 +102,7 @@ function Cust() {
                             )
                         })
                     }
+                    </tbody>
                 </table>
             </>
 

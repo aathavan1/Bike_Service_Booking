@@ -8,7 +8,6 @@ const mailer = require('./mail')
 const detailBike = (req, res) => {
     UserModel.find().then(function (user) {
         res.json(user)
-        // console.log("Bike details was view by the shop owner")
     }).catch(function (err) {
         res.json(err)
     })
@@ -36,7 +35,14 @@ const changeStatus = async (req, res) => {
 
 
 const deletebike= async(req,res)=>{
-    await UserModel.findByIdAndDelete(req.params.id);
+    try{
+        console.log("del")
+        await UserModel.findByIdAndDelete(req.params.id);
+        
+    }
+    catch{
+        console.log("Error")
+    }
 
 }
 
