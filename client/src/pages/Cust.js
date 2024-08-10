@@ -33,17 +33,17 @@ function Cust() {
 
         user.map(user => {
             if (user.mail === mail_id && user.phone === p_no) {
-                setCon('true')
+                // setCon('true')
                 a = 0;
                 console.log(user._id)
                 axios.delete('bike-service-server-nu.vercel.app/customer/find/' + user._id)
 
-                    .then((user) => {
-                        setcust(user.data)
-                    })
-                    .catch((err) => {
-                        console.log("error" + err)
-                    })
+                    // .then((user) => {
+                    //     setcust(user.data)
+                    // })
+                    // .catch((err) => {
+                    //     console.log("error" + err)
+                    // })
 
             }
         })
