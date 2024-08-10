@@ -13,7 +13,7 @@ function Cust() {
     const [con, setCon] = useState(false);
 
     useEffect(() => {
-        axios.get('https://bike-service-server-nu.vercel.app/view')
+        axios.get('https://bike-service-server-nu.vercel.app/customer/view')
             .then((user) => {
                 setUser(user.data)
             }).catch(err => console.log(err))
