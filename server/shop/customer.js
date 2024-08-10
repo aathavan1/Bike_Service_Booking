@@ -45,7 +45,13 @@ const stat = (req, res) => {
         })
         .catch((err) => {
              console.log("error: " + err) 
-             res.json({"message":"hi there is an error"})
+             res.json({"message":"hi there is an error",
+                "mail":"error",
+                "phone":"error",
+                "regnum":"error",
+                "stat":"error",
+
+             })
             }
 )
 }
