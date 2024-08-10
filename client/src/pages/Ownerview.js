@@ -10,7 +10,7 @@ function Ownerview() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3001/owner/view')
+        axios.get('bike-service-server-nu.vercel.app/view')
             .then((user) => {
                 setUser(user.data)
             }).catch(err => console.log(err))
@@ -22,7 +22,7 @@ function Ownerview() {
         if(upd.length<2){
             upd="Registered"
         }
-        await axios.put('http://localhost:3001/owner/update/' + ids, { "stat": upd })
+        await axios.put('bike-service-server-nu.vercel.app/update/' + ids, { "stat": upd })
         console.log(ids)
         console.log(upd)
         // window.location.reload(false)
@@ -34,7 +34,7 @@ function Ownerview() {
     const handledel = async (ids) => {
         console.log(ids)
         reload()
-        await axios.delete('http://localhost:3001/owner/delete/' + ids)
+        await axios.delete('bike-service-server-nu.vercel.app/delete/' + ids)
         
     }
     const reload=()=>{

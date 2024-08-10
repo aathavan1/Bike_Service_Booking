@@ -15,7 +15,7 @@ const Add = () => {
         const regg="Registered"
        
 
-            await axios.post('http://localhost:3001/customer/create', {
+            await axios.post('bike-service-server-nu.vercel.app/create', {
                 "mail": mail,
                 "phone": phone,
                 "regnum": reg,
