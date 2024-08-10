@@ -36,7 +36,7 @@ function Cust() {
                 setCon('true')
                 a = 0;
                 console.log(user._id)
-                axios.put('bike-service-server-nu.vercel.app/customer/find/' + user._id)
+                axios.delete('bike-service-server-nu.vercel.app/customer/find/' + user._id)
 
                     .then((user) => {
                         setcust(user.data)
