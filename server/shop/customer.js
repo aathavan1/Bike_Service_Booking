@@ -43,7 +43,11 @@ const stat = (req, res) => {
             console.log(data)
             res.json(data)
         })
-        .catch((err) => { console.log("error: " + err) })
+        .catch((err) => {
+             console.log("error: " + err) 
+             res.json({"message":"hi there is an error"})
+            }
+)
 }
 
 module.exports = {
