@@ -26,7 +26,10 @@ const changeStatus = async (req, res) => {
         console.log("UPDATED")
         console.log(req.body.stat)
         if (req.body.stat == "Completed") {
-            mailer.mail_send(a.mail, "Aathavan Bike Service Center", "Dear Customer Your Bike Has completed their service ", a.regnum+" please get in on time")
+            mailer.mail_send(a.mail,
+                "Aathavan Bike Service Center",
+                "Dear Customer Your Bike Has completed their service ",
+                a.regnum + " please get in on time")
             console.log("generated")
         }
         res.json(users)
@@ -34,13 +37,13 @@ const changeStatus = async (req, res) => {
 }
 
 
-const deletebike= async(req,res)=>{
-    try{
+const deletebike = async (req, res) => {
+    try {
         console.log("del")
         await UserModel.findByIdAndDelete(req.params.id);
-        
+
     }
-    catch{
+    catch {
         console.log("Error")
     }
 

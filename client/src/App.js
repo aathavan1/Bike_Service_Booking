@@ -6,7 +6,6 @@ import  Home from "./pages/Home.js";
 import Header from './pages/Header.js';
 import Add from './pages/Add.jsx';
 import Ownerview from './pages/Ownerview.js';
-import Custview from './pages/Custview.js';
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
     <Route path="/Owner" element={<Owner />}/>
     <Route path="/Ownerview" element={<Ownerview />}/>
     <Route path="/Cust" element={<Cust />}/>
-    <Route path=":id" element={<Custview />}/>
     <Route path="/Add" element={<Add />}/>
    </Routes>
    </BrowserRouter>

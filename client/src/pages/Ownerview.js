@@ -33,8 +33,8 @@ function Ownerview() {
     
     const handledel = async (ids) => {
         console.log(ids)
-        await axios.delete('http://localhost:3001/owner/delete/' + ids)
         reload()
+        await axios.delete('http://localhost:3001/owner/delete/' + ids)
         
     }
     const reload=()=>{
@@ -77,9 +77,10 @@ function Ownerview() {
                                             <option>Ongoing</option>
                                             <option>Completed</option>
                                         </select>
+                                        <br />
 
                                 <button type="submit" placeholder="submit" onClick={() => handlesub(user._id, option)} >Submit</button>
-                                <button type="submit" placeholder="submit" onClick={() => handledel(user._id)} >delete</button>
+                                <button type="submit" placeholder="delete" onClick={() => handledel(user._id)} >delete</button>
                                     
                                 </td>
                             </tr>

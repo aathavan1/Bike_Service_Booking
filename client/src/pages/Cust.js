@@ -49,7 +49,7 @@ function Cust() {
         })
 
         if (a == 1) {
-            Swal.fire("Error!", "Wrong Username or password", "error")
+            Swal.fire("Error!", "Can't find Mail with this Phone", "error")
         }
     }
 

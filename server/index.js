@@ -8,7 +8,6 @@ app.use(express.json())
 
 app.use("/owner", require('./routes/routeso'))
 app.use("/customer", require('./routes/routesc'))
-app.use("/create", require('./routes/create'))
 
 
 
