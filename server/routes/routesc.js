@@ -7,7 +7,7 @@ const customer = require('../shop/customer')
 
 route.post("/create", (customer.createBike))
 
-route.get("/find/:id", (customer.stat))
+route.put("/find/:id", (customer.stat))
 
 
 module.exports = route;

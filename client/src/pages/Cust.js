@@ -9,7 +9,9 @@ function Cust() {
     const [mail, setMail] = useState('')
     const [phone, setPhone] = useState('')
     const [user, setUser] = useState([])
-    const [cust, setcust] = useState([])
+    const [cust, setcust] = useState([{
+
+    }])
     const [con, setCon] = useState(false);
 
     useEffect(() => {
@@ -36,7 +38,7 @@ function Cust() {
                 setCon('true')
                 a = 0;
                 console.log(user._id)
-                axios.get('bike-service-server-nu.vercel.app/customer/find/' + user._id)
+                axios.put('bike-service-server-nu.vercel.app/customer/find/' + user._id)
 
                     .then((user) => {
                         setcust(user.data)
