@@ -50,15 +50,6 @@ function Cust() {
                 setCnum(user.phone)
                 setCreg(user.regnum)
                 setCstat(user.stat)
-                // axios.put('bike-service-server-nu.vercel.app/customer/find/' + user._id)
-
-                //     .then((user) => {
-                //         setcust(user.data)
-                //     })
-                //     .catch((err) => {
-                //         console.log("error" + err)
-                //     })
-
                 if(user.stat==="Completed"){
                     Swal.fire("Ready!!!","You have completed your bike service","sucess");
                 }
@@ -109,23 +100,7 @@ function Cust() {
                                     <td>{cstat}</td>
                                     
                                 </tr>
-                    {/* {
-                        cust.map(cust => {
-                            if(cust.stat==="Completed"){
-                                Swal.fire("Ready!!!","You have completed your bike service","sucess");
-                            }
-                            return (
-
-                                <tr key={cust._id}>
-                                    <td>{cust.mail}</td>
-                                    <td>{cust.phone}</td>
-                                    <td>{cust.regnum}</td>
-                                    <td>{cust.stat}</td>
-                                    
-                                </tr>
-                            )
-                        })
-                    } */}
+                    
                     </tbody>
                 </table>
             </>
