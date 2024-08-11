@@ -9,14 +9,7 @@ function Cust() {
     const [mail, setMail] = useState('')
     const [phone, setPhone] = useState('')
     const [user, setUser] = useState([])
-    const [cust, setcust] = useState([{
-        "_id":"",
-        "mail":"",
-        "phone":"",
-        "regnum":"",
-        "stat":""
-
-    }])
+    const [cust, setcust] = useState([])
     const [con, setCon] = useState(false);
 
     useEffect(() => {
