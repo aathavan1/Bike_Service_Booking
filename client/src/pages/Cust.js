@@ -59,7 +59,7 @@ function Cust() {
                 //         console.log("error" + err)
                 //     })
 
-                if(cstat==="Completed"){
+                if(user.stat==="Completed"){
                     Swal.fire("Ready!!!","You have completed your bike service","sucess");
                 }
             }
