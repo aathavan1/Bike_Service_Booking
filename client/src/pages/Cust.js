@@ -10,6 +10,11 @@ function Cust() {
     const [phone, setPhone] = useState('')
     const [user, setUser] = useState([])
     const [cust, setcust] = useState([{
+        "_id":"",
+        "mail":"",
+        "phone":"",
+        "regnum":"",
+        "stat":""
 
     }])
     const [con, setCon] = useState(false);
