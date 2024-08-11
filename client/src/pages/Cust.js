@@ -51,7 +51,7 @@ function Cust() {
                 setCreg(user.regnum)
                 setCstat(user.stat)
                 if(user.stat==="Completed"){
-                    Swal.fire("Ready!!!","You have completed your bike service","sucess");
+                    Swal.fire("Ready!!!","You have completed your bike service","success");
                 }
             }
         })
