@@ -11,6 +11,15 @@ function Cust() {
     const [user, setUser] = useState([])
     const [cust, setcust] = useState([])
     const [con, setCon] = useState(false);
+    
+    
+    
+    //for customer display
+    const [cmail, setCmail] = useState('');
+    const [cnum, setCnum] = useState('');
+    const [creg, setCreg] = useState('');
+    const [cstat, setCstat] = useState('');
+
 
     useEffect(() => {
         axios.get('https://bike-service-server-nu.vercel.app/owner/view')
@@ -36,14 +45,19 @@ function Cust() {
                 setCon('true')
                 a = 0;
                 console.log(user._id)
-                axios.put('bike-service-server-nu.vercel.app/customer/find/' + user._id)
 
-                    .then((user) => {
-                        setcust(user.data)
-                    })
-                    .catch((err) => {
-                        console.log("error" + err)
-                    })
+                setCmail(user.mail)
+                setCnum(user.phone)
+                setCreg(user.regnum)
+                setCstat(user.stat)
+                // axios.put('bike-service-server-nu.vercel.app/customer/find/' + user._id)
+
+                //     .then((user) => {
+                //         setcust(user.data)
+                //     })
+                //     .catch((err) => {
+                //         console.log("error" + err)
+                //     })
 
             }
         })
@@ -85,7 +99,14 @@ function Cust() {
                     </tr>
                     </thead>
                     <tbody>
-                    {
+                                <tr>
+                                    <td>{cmail}</td>
+                                    <td>{cnum}</td>
+                                    <td>{creg}</td>
+                                    <td>{cstat}</td>
+                                    
+                                </tr>
+                    {/* {
                         cust.map(cust => {
                             if(cust.stat==="Completed"){
                                 Swal.fire("Ready!!!","You have completed your bike service","sucess");
@@ -101,7 +122,7 @@ function Cust() {
                                 </tr>
                             )
                         })
-                    }
+                    } */}
                     </tbody>
                 </table>
             </>
